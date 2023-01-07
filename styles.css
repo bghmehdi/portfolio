@@ -1,0 +1,228 @@
+*,
+*:before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+:root {
+    --primary-color: #f7f6f2;
+    --secondary-color: #1b2430;
+    --accent-color: #a10035;
+}
+body {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+        sans-serif;
+    /* padding-inline: 5em; */
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+.sticky {
+    background-color: var(--primary-color);
+    position: fixed;
+    /* z-index: 2; */
+    width: 100%;
+    top: 0;
+}
+.sticky + .second-section {
+    padding-top: 13.7em;
+}
+.navbar {
+    border-top: 1px solid var(--secondary-color);
+    border-bottom: 1px solid var(--secondary-color);
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 3em;
+    align-items: center;
+}
+.main-nav {
+    list-style-type: none;
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.main-nav li {
+    margin: 0;
+}
+.nav-links {
+    margin-left: 40px;
+    text-decoration: none;
+    color: inherit;
+}
+.logo {
+    color: inherit;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+.navbar-toggle {
+    display: none;
+}
+.logo:hover,
+.nav-links:hover {
+    color: var(--accent-color);
+}
+
+.first-section {
+    background-image: linear-gradient(
+            to bottom,
+            transparent 10%,
+            var(--primary-color)
+        ),
+        url(cloud.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    z-index: 1;
+    padding-inline: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    height: 100vh;
+    position: relative;
+}
+.first-section::before {
+    z-index: -2;
+    background: var(--primary-color);
+    opacity: 0.7;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.first-section h1 {
+    font-size: 7rem;
+}
+.first-section p {
+    font-size: 2rem;
+    width: 21.5ch;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid var(--accent-color);
+    animation: text 3s steps(20) alternate infinite;
+}
+
+@keyframes text {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 21.5ch;
+    }
+}
+
+.second-section {
+    height: 120vh;
+}
+
+.scroll-down {
+    opacity: 1;
+    -webkit-transition: all 0.5s ease-in 3s;
+    transition: all 0.5s ease-in 1s;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -16px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    border: 2px solid var(--accent-color);
+    background-size: 14px auto;
+    border-radius: 50%;
+    z-index: 2;
+    animation: bounce 2s infinite 2s;
+    transition: all 0.2s ease-in;
+    transform: scale(1);
+}
+.scroll-down:before {
+    position: absolute;
+    top: calc(50% - 8px);
+    left: calc(50% - 6px);
+    transform: rotate(-45deg);
+    display: block;
+    width: 12px;
+    height: 12px;
+    content: "";
+    border: 2px solid var(--accent-color);
+    border-width: 0px 0 2px 2px;
+}
+
+@keyframes bounce {
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+i {
+    position: relative;
+    font-size: 1em;
+    cursor: pointer;
+    padding: 0.5em;
+    bottom: 5px;
+}
+
+.second-section h2 {
+    font-size: 5rem;
+}
+.second-section {
+    padding-inline: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    height: 100vh;
+}
+.third-section h2 {
+    font-size: 5rem;
+}
+.third-section {
+    padding-inline: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    height: 100vh;
+}
+.fourth-section h2 {
+    font-size: 5rem;
+}
+.fourth-section {
+    padding-inline: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    height: 100vh;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 2em 3em;
+    display: flex;
+    justify-content: center;
+}
