@@ -8,12 +8,23 @@
 html {
     scroll-behavior: smooth;
 }
+::-webkit-scrollbar {
+    background-color: var(--primary-color);
+    width: 8px;
+    border-left:1px solid var(--accent-color);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--accent-color);
+    border-radius: 3px;
+}
 :root {
     --primary-color: #1b2430;
     --secondary-color: #f7f6f2;
     --accent-color: #a10035;
 }
 body {
+    scroll-margin: 1em;
+    /* overflow: hidden; */
     font-family: "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
         sans-serif;
     /* padding-inline: 5em; */
@@ -22,6 +33,7 @@ body {
 }
 .sticky {
     background-color: var(--primary-color);
+    border-bottom: 1px solid var(--secondary-color);
     position: fixed;
     /* z-index: 2; */
     width: 100%;
@@ -32,7 +44,7 @@ body {
 }
 .navbar {
     border-top: 1px solid var(--secondary-color);
-    border-bottom: 1px solid var(--secondary-color);
+    
     font-size: 18px;
     display: flex;
     justify-content: space-between;
@@ -82,9 +94,7 @@ body {
     z-index: 1;
     padding-inline: 3em;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: baseline;
+    align-items: center; 
     height: 100vh;
     position: relative;
 }
@@ -194,6 +204,7 @@ i {
     font-size: 5rem;
 }
 .second-section {
+    border-top: 1px solid var(--secondary-color);
     padding-block: 7em;
     padding-inline: 3em;
     display: flex;
@@ -206,6 +217,7 @@ i {
     font-size: 5rem;
 }
 .third-section {
+    border-top: 1px solid var(--secondary-color);
     padding-block: 7em;
     padding-inline: 3em;
     display: flex;
@@ -218,6 +230,7 @@ i {
     font-size: 5rem;
 }
 .fourth-section {
+    border-top: 1px solid var(--secondary-color);
     padding-block: 7em;
     padding-inline: 3em;
     display: flex;
@@ -232,8 +245,12 @@ i {
 .info ul {
     font-size: 1.2rem;
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    padding-block: .5em;
 }
-.info ul li:nth-child(3) {
+.info ul li:nth-child(4) {
     text-align: center;
 }
 .info i:hover {
@@ -256,6 +273,7 @@ textarea {
     border: none;
     border-radius: 0;
     border-bottom: 1px solid var(--secondary-color);
+    border-radius: 3px;
     transition: 0.3s;
 }
 input {
@@ -272,9 +290,11 @@ form button {
     color: var(--primary-color);
     background-color: var(--accent-color);
     padding: 0.7em 1.5em;
+    border-radius: 3px;
 }
 
 footer {
+    border-top: 1px solid var(--secondary-color);
     background-color: var(--primary-color);
     color: var(--secondary-color);
     padding: 2em 3em;
