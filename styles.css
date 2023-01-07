@@ -9,8 +9,8 @@ html {
     scroll-behavior: smooth;
 }
 :root {
-    --primary-color: #f7f6f2;
-    --secondary-color: #1b2430;
+    --primary-color: #1b2430;
+    --secondary-color: #f7f6f2;
     --accent-color: #a10035;
 }
 body {
@@ -156,6 +156,15 @@ body {
     content: "";
     border: 2px solid var(--accent-color);
     border-width: 0px 0 2px 2px;
+}
+
+.scroll-down:hover{
+    background-color: var(--accent-color);
+    border: 2px solid var(--secondary-color);
+}
+.scroll-down:hover::before{
+    border-bottom: 2px solid var(--secondary-color);
+    border-left: 2px solid var(--secondary-color);
 }
 
 @keyframes bounce {
