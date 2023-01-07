@@ -31,6 +31,9 @@ body {
     background-color: var(--primary-color);
     color: var(--secondary-color);
 }
+h1,h2,h3,h4{
+    text-transform:uppercase;
+}
 .sticky {
     background-color: var(--primary-color);
     border-bottom: 1px solid var(--secondary-color);
@@ -250,7 +253,7 @@ i {
     gap: .5em;
     padding-block: .5em;
 }
-.info ul li:nth-child(4) {
+.info ul li {
     text-align: center;
 }
 .info i:hover {
