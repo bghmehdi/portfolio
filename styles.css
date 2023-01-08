@@ -78,16 +78,18 @@ h4 {
     border-radius: 3px;
     text-decoration: none;
     color: var(--accent-color);
-    font-size: 1.3em;
+
     font-family: "Libre Bodoni";
     border: 1px solid;
-    letter-spacing: 2px;
+
+    transition: 0.3s;
 }
 .navbar-toggle {
     display: none;
 }
 .logo:hover {
-    background-color: var(--secondary-color);
+    /* background-color: var(--secondary-color); */
+    transform: scale(1.05);
 }
 .nav-links:hover,
 .active {
@@ -302,16 +304,18 @@ textarea:focus {
     border-bottom: 1px solid var(--accent-color);
 }
 form button {
-    text-transform: uppercase ;
+    text-transform: uppercase;
     border: 1px solid var(--accent-color);
     color: var(--accent-color);
     background-color: var(--primary-color);
     padding: 0.7em 1.5em;
     border-radius: 3px;
     cursor: pointer;
+    transition: 0.3s;
 }
-form button:hover{
-    background-color: var(--secondary-color);
+form button:hover {
+    /* background-color: var(--secondary-color); */
+    transform: scale(1.05);
 }
 
 footer {
