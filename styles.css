@@ -21,6 +21,7 @@ html {
     --primary-color: #1b2430;
     --secondary-color: #f7f6f2;
     --accent-color: #a10035;
+    --accent-color: #8ce7f4;
 }
 body {
     scroll-margin: 1em;
